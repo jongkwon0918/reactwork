@@ -18,6 +18,10 @@ export default function A_BasicStyle() {
       <h3>css파일에 설정된 스타일 적용하기</h3>
       <p>css파일은 프로젝트 내부 src/assets/css 폴더에 저장</p>
       <div className="basic">외부파일로 css 적용</div>
+
+      {/* 이름 중복 시 생기는 현상 전역변수 */}
+      <h3 className="title">나는 새로운 타이틀이야</h3>
+
     </div>
   );
 }

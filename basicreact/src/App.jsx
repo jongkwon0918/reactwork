@@ -12,6 +12,8 @@ import B_Usejavascript from "./components/C_JSX/B_Usejavascript.jsx";
 import C_UseControl from "./components/C_JSX/C_UseControl.jsx";
 import D_ExportData from "./components/C_JSX/D_ExportData.jsx";
 import A_BasicStyle from "./components/D_style/A_BasicStyle.jsx";
+import B_ModuleTest from "./components/D_style/B_ModuleTest.jsx";
+import C_styledComponent from "./components/D_style/C_styledComponent.jsx";
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
 
       <h1>스타일 적용하기</h1>
       <A_BasicStyle />
+      <B_ModuleTest />
+      <C_styledComponent />
     </>
   );
 }
