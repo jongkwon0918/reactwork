@@ -1,0 +1,11 @@
+.basic {
+  background-color: lightcoral;
+  color: lime;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+}
+p {
+  font-weight: bolder;
+  color: lightblue;
+}
