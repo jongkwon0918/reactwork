@@ -14,6 +14,7 @@ import D_ExportData from "./components/C_JSX/D_ExportData.jsx";
 import A_BasicStyle from "./components/D_style/A_BasicStyle.jsx";
 import B_ModuleTest from "./components/D_style/B_ModuleTest.jsx";
 import C_styledComponent from "./components/D_style/C_styledComponent.jsx";
+import A_EventContainer from "./components/E_event/A_EventContainer.jsx";
 
 function App() {
   return (
@@ -44,6 +45,9 @@ function App() {
       <A_BasicStyle />
       <B_ModuleTest />
       <C_styledComponent />
+
+      <h1>이벤트 이용하기</h1>
+      <A_EventContainer />
     </>
   );
 }
