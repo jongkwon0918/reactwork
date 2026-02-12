@@ -6,7 +6,42 @@ import logo from "@/assets/react.svg";
 import car from "@/assets/img.jpg";
 import AbatarComponent from "./AbatarComponent";
 import ModalComponent from "./ModalComponent";
+import { members } from "@/data/exportData.js";
+import TableComponent from "./TableComponent";
+import TableHeadComponent from "./TableHeadComponent";
+import TableBodyComponent from "./TableBodyComponent";
 export default function CommonComtainer() {
+  const data = [
+    {
+      no: 1,
+      title: "첫번째 과목",
+      writer: "user01",
+      content: "첫번째 내용",
+      writeDate: new Date(),
+    },
+    {
+      no: 2,
+      title: "두번째 과목",
+      writer: "user02",
+      content: "두번째 내용",
+      writeDate: new Date(),
+    },
+    {
+      no: 3,
+      title: "세번째 과목",
+      writer: "user03",
+      content: "세번째 내용",
+      writeDate: new Date(),
+    },
+    {
+      no: 4,
+      title: "네번째 과목",
+      writer: "user04",
+      content: "네번째 내용",
+      writeDate: new Date(),
+    },
+  ];
+
   return (
     <div>
       <h3>CardComponent 이용하기</h3>
@@ -57,7 +92,14 @@ export default function CommonComtainer() {
         </ModalComponent>
 
         <h3>테이블을 생성하는 컴포넌트</h3>
-        
+        <TableComponent data={data} />
+        <TableComponent data={members} />
+        <table>
+          <TableHeadComponent
+            hedaer={["번호", "제목", "작성자", "내용", "작성일"]}
+          />
+          <TableBodyComponent body={data} />
+        </table>
       </div>
     </div>
   );

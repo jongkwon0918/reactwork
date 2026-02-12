@@ -7,6 +7,8 @@ import C_styleclass from "./props/C_styleclass";
 import D_ChildComponent from "./props/D_ChildComponent";
 import D_ChildJSXComponent from "./props/D_ChildSXComponent";
 import CommonComtainer from "./props/sample/CommonComtainer";
+import A_StateBasicComponent from "./state/A_StateBasicComponent";
+import B_StateObjectUse from "./state/B_StateObjectUse";
 
 export default function DataContainer() {
   const strData = "문자열데이터";
@@ -84,6 +86,9 @@ export default function DataContainer() {
       </D_ChildJSXComponent>
       <h2>공통컴포넌트를 만들어 활용하기</h2>
       <CommonComtainer />
+      <h1>state데이터 활용하기</h1>
+      <A_StateBasicComponent />
+      <B_StateObjectUse/>
     </div>
   );
 }

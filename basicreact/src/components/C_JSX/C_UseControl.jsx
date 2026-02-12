@@ -15,7 +15,7 @@ export default function C_UseControl() {
     let msg;
     if (age > 19) msg = "당신은 성인입니다.";
     else msg = "당신은 성인이 아닙니다.";
-    return <h5>{msg}</h5>;
+    return <span>{msg}</span>;
   };
 
   const switchTest = (cho) => {
@@ -36,7 +36,7 @@ export default function C_UseControl() {
     }
     return tags;
   };
-  
+
   return (
     <div>
       <h2>조건문 사용하기</h2>
