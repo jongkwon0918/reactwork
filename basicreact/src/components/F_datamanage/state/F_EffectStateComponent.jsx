@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import EffectDebouncerComponent from "./sample/EffectDebouncerComponent";
 //useEffect(()=>{}) : 매번 (과부하 주의!)
 
 //useEffect(()=>{},[]) : 처음 한 번만
