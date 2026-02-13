@@ -13,7 +13,8 @@ export default function TableBodyComponent({ body = [], headersize }) {
                   if (typeof temp == "object") {
                     return (
                       <td key={`${temp}_${i}`}>{`
-                        ${temp.getFullYear()}-${(temp.getMonth() + 1).toString().padStart(2, "0")}-${temp.getDate().toString().padStart(2, "0")}`}</td>
+                        ${temp.getFullYear()}-${(temp.getMonth() + 1).toString().padStart(2, "0")}-${temp.getDate().toString().padStart(2, "0")}`}
+                      </td>
                     );
                   } else return <td key={`${temp}_${i}`}>{temp}</td>;
                 })}

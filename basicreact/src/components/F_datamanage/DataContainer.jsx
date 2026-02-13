@@ -9,6 +9,11 @@ import D_ChildJSXComponent from "./props/D_ChildSXComponent";
 import CommonComtainer from "./props/sample/CommonComtainer";
 import A_StateBasicComponent from "./state/A_StateBasicComponent";
 import B_StateObjectUse from "./state/B_StateObjectUse";
+import C_StateUse from "./state/C_StateUse";
+import ProductInput from "./state/sample/ProductInput";
+import D_StateSendUse from "./state/D_StateSendUse";
+import E_LoadingTest from "./state/E_LoadingTest";
+import F_EffectStateComponent from "./state/F_EffectStateComponent";
 
 export default function DataContainer() {
   const strData = "문자열데이터";
@@ -88,7 +93,11 @@ export default function DataContainer() {
       <CommonComtainer />
       <h1>state데이터 활용하기</h1>
       <A_StateBasicComponent />
-      <B_StateObjectUse/>
+      <B_StateObjectUse />
+      <C_StateUse />
+      <D_StateSendUse />
+      <E_LoadingTest />
+      <F_EffectStateComponent />
     </div>
   );
 }
