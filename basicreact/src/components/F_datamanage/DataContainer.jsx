@@ -14,6 +14,7 @@ import ProductInput from "./state/sample/ProductInput";
 import D_StateSendUse from "./state/D_StateSendUse";
 import E_LoadingTest from "./state/E_LoadingTest";
 import F_EffectStateComponent from "./state/F_EffectStateComponent";
+import ContextContainer from "./context/ContextContainer";
 
 export default function DataContainer() {
   const strData = "문자열데이터";
@@ -96,8 +97,12 @@ export default function DataContainer() {
       <B_StateObjectUse />
       <C_StateUse />
       <D_StateSendUse />
+      <h2>로딩화면 구현하기</h2>
       <E_LoadingTest />
       <F_EffectStateComponent />
+
+      <h2>context데이터 활용하기</h2>
+      <ContextContainer/>
     </div>
   );
 }
