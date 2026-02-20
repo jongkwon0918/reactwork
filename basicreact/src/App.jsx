@@ -16,6 +16,7 @@ import B_ModuleTest from "./components/D_style/B_ModuleTest.jsx";
 import C_styledComponent from "./components/D_style/C_styledComponent.jsx";
 import A_EventContainer from "./components/E_event/A_EventContainer.jsx";
 import DataContainer from "./components/F_datamanage/DataContainer.jsx";
+import HooksContainer from "./components/G_hooks/HooksContainer.jsx";
 
 function App() {
   return (
@@ -52,6 +53,9 @@ function App() {
 
       <h1>리엑트에서 데이터 관리하기</h1>
       <DataContainer />
+
+      <h1>hooks 이용하기</h1>
+      <HooksContainer/>
     </>
   );
 }

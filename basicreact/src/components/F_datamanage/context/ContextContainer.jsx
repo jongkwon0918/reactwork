@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import A_PropsDrilling from "./A_PropsDrilling";
 import { ContextChange, ContextTest } from "./resources/Context";
 import B_UseContext_Tag from "./B_UseContext_Tag";
@@ -11,9 +11,17 @@ import { MyContextProvider } from "./resources/myprovider";
 import D_ModuleContext from "./D_ModuleContext";
 import MemberContainer from "./child/MemberContainer";
 import { members } from "../../../data/exportData";
+import ButtonComponent from "../props/sample/ButtonComponent";
+import C_Child from "./child/C_Child";
 export default function ContextContainer() {
   const [data, setData] = useState("초기값");
   const [memberList, setMembers] = useState(members);
+  const [count, setCount] = useState(0);
+  // const renderingTest = { data: "랜더링테스트데이터" };
+  //useMemo()를 이용해서 최적화하기 -> 최신버전에서 complie가 추가되어 자동으로 처리
+  const renderingTest = useMemo(() => {
+    return { data: "랜더링테스트데이터" };
+  }, []);
   return (
     <div>
       <h2>Context활용하기</h2>
@@ -69,6 +77,25 @@ export default function ContextContainer() {
       <ContextChange.Provider value={{ memberList, setMembers }}>
         <MemberContainer />
       </ContextChange.Provider>
+
+      <h3>랜더링 문제</h3>
+      <p>
+        context와 상관없는 데이터를 변경하더라도 같이 랜더링되는 문제가 발생{" "}
+        <br />
+        최적화 context 데이터에 useMemo()를 이용
+      </p>
+      <ContextTest.Provider value={renderingTest}>
+        <ButtonComponent
+          variant="warn"
+          size="small"
+          onClick={() => {
+            setCount((prev) => prev + 1);
+          }}
+        >
+          증가 : {count}
+        </ButtonComponent>
+        <C_Child />
+      </ContextTest.Provider>
     </div>
   );
 }
