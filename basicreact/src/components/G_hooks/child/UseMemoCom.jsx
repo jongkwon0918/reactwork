@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import ButtonComponent from "../../F_datamanage/props/sample/ButtonComponent";
-export default function NonUseMemo() {
+
+export default function UseMemoCom() {
   const [num, setNum] = useState();
   const [theme, setTheme] = useState("light");
   const toggleTheme = () => {
@@ -21,18 +22,16 @@ export default function NonUseMemo() {
     }
     return result;
   };
+  //useMemo 설정하기
+  const memoData = useMemo(() => {
+    return slowSquare();
+  }, [num]);
   return (
     <div style={style}>
       <h2>느린 계산기</h2>
-      <input
-        type="text"
-        value={num}
-        onChange={(e) => setNum(e.target.value)}
-        placeholder="절대 입력하지마"
-      />
-      <p>결과 : {slowSquare()}</p>
-
-      {/* 버튼 누를때마다 다시 계산해서 느림 */}
+      <input type="text" value={num} onChange={(e) => setNum(e.target.value)} />
+      <p>결과 : {memoData}</p>
+      {/* 계산과 테마변경 랜더링을 달리함 */}
       <ButtonComponent onClick={toggleTheme}>테마 변경하기</ButtonComponent>
     </div>
   );

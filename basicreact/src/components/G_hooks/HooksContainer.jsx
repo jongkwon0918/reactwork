@@ -1,6 +1,7 @@
 import React from "react";
 import A_UseRefTest from "./A_UseRefTest";
 import B_UseMemoTest from "./B_UseMemoTest";
+import C_UseReducerCom from "./C_UseReducerCom";
 
 export default function HooksContainer() {
   return (
@@ -15,6 +16,9 @@ export default function HooksContainer() {
 
       {/* useMemo() 이용하기 */}
       <B_UseMemoTest />
+
+      {/* useReducer() 활용 */}
+      <C_UseReducerCom />
     </div>
   );
 }
